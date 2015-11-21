@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE urlrewrite
+    PUBLIC "-//tuckey.org//DTD UrlRewrite 4.0//EN"
+    "http://www.tuckey.org/res/dtds/urlrewrite4.0.dtd">
+
+<urlrewrite>
+	<!-- <rule>
+		<from>^/{1}$</from>
+		<to>/index.jsp</to>
+	</rule>
+	<rule>
+		<from>^([a-z/-]+)$</from>
+		<to>$1.jsp</to>
+	</rule> -->
+
+	<rule>
+		<from>^/view/([_0-9a-zA-Z]*)$</from>
+		<to type="forward">/view.jsp?i=$1</to>
+	</rule>
+	<rule>
+		<from>^/login$</from>
+		<to type="forward">/login.jsp</to>
+	</rule>
+	<rule>
+		<from>^/rank$</from>
+		<to type="forward">/rank.jsp</to>
+	</rule>
+	<rule>
+		<from>^/join$</from>
+		<to type="forward">/join.jsp</to>
+	</rule>
+
+	<rule>
+		<from>^/in$</from>
+		<to type="forward">/ac/log/login.jsp</to>
+	</rule>
+	<rule>
+		<from>^/out$</from>
+		<to type="forward">/ac/log/logout.jsp</to>
+	</rule>
+</urlrewrite>
